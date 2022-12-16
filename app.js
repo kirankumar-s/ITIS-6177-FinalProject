@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 /**
  * @swagger
- * /sentiments/:
+ * /api/v1/sentiments/:
  *   post:
  *     summary: Get sentiment of input text which is in any language
  *     description: Add the text or the conservation of anylanguage for which context sentiment has to be identified
