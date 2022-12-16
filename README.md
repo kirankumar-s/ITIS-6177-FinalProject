@@ -36,6 +36,28 @@ http://162.243.172.115:5000/
 {"text": "<Your Text or Conversation goes here>"}
 ```
 
+## Possible Responses :
+
+| Response code | Description             |
+| ------------- | ----------------------- |
+| 200           | OK                      |
+| 400           | Input Validation Failed |
+| 500           | Internal Server Error   |
+
+#
+
+### Output:
+
+Contains the object with identified language, overall sentiment and confidences along with analysis of each sentences in the provided text
+
+## Swagger
+
+Swagger for the API added for testing the API withing the host
+
+```
+http://162.243.172.115:5000/docs
+```
+
 # Setup in Local
 
 1. Make sure you have installed node, if not download and install the latest version of node
@@ -50,8 +72,7 @@ http://162.243.172.115:5000/
 
 **Request:**
 
-```JSON
-
+```
 curl -X 'POST' \
   'http://162.243.172.115:5000/api/v1/sentiments/' \
   -H 'accept: application/json' \
@@ -151,7 +172,7 @@ curl -X 'POST' \
 
 **Request:**
 
-```JSON
+```
 curl -X 'POST' \
   'http://162.243.172.115:5000/api/v1/sentiments/' \
   -H 'accept: application/json' \
