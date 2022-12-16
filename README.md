@@ -14,6 +14,7 @@ The Azure's sentiment analysis API and language detection API are integrated wit
 The request made to the APIs are asynchronous and [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is used for calling the APIs and waiting for their responses.
 
 **Environment And Libraries Used**
+
 SentimentalAnalysis API:
 
 - Protocol used: HTTP
