@@ -5,6 +5,7 @@ This API is a wrapper to the [Azure's sentiment analysis API](https://learn.micr
 [Sentimental Analysis](https://en.wikipedia.org/wiki/Sentiment_analysis) is an analysis to identify the emotions of the particular conversation or the text.
 
 ![image](https://monkeylearn.com/static/30607381159c995d7e967c1f0530e50f/920fd/how-does-sentiment-analysis-work%402x.png)
+ref: https://monkeylearn.com/sentiment-analysis/
 
 # Development
 
@@ -28,6 +29,12 @@ Temporarily the API is hosted in one of the droplets in Digital Ocean, to run so
 
 ```
 http://162.243.172.115:5000/
+```
+
+### API Endpoint
+
+```
+http://162.243.172.115:5000/api/v1/sentiments/
 ```
 
 ### Post Request Body
@@ -60,13 +67,15 @@ http://162.243.172.115:5000/docs
 
 # Setup in Local
 
-1. Make sure you have installed node, if not download and install the latest version of node
-2. Clone the repository to local machine
-3. Open terminal and run the command "npm i"
-4. To run the server locally use following command "node app.js"
-5. Test the server with the following endpoint "http://localhost:5000/"
-6. To test the API, send the post request to the following endpoint "http://localhost:5000/api/v1/sentiments/" with the payload containing the text to do sentimental analysis.
-7. For swagger docs, use the following endpoint "http://localhost:5000/docs"
+1. Create [Azure language resource](https://azure.microsoft.com/en-us/products/cognitive-services/language-service/#overview) and copy the Key and Endpoint
+2. Set the Key and Endpoint to the enviroment variables with variable names as _LANGUAGE_KEY_ and _LANGUAGE_ENDPOINT_
+3. Make sure you have installed node, if not download and install the latest version of node
+4. Clone the repository to local machine
+5. Open terminal and run the command "npm i"
+6. To run the server locally use following command "node app.js"
+7. Test the server with the following endpoint "http://localhost:5000/"
+8. To test the API, send the post request to the following endpoint "http://localhost:5000/api/v1/sentiments/" with the payload containing the text to do sentimental analysis.
+9. For swagger docs, use the following endpoint "http://localhost:5000/docs"
 
 # Usage:
 
