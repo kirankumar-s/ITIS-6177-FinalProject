@@ -4,7 +4,7 @@ This API is a wrapper to the [Azure's sentiment analysis API](https://learn.micr
 
 [Sentimental Analysis](https://en.wikipedia.org/wiki/Sentiment_analysis) is an analysis to identify the emotions of the particular conversation or the text.
 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmonkeylearn.com%2Fsentiment-analysis%2F&psig=AOvVaw0Eiw-aX-iXDc-dI--mjUfR&ust=1671249537465000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIDyrOmf_fsCFQAAAAAdAAAAABAE)
+![image](https://monkeylearn.com/static/30607381159c995d7e967c1f0530e50f/920fd/how-does-sentiment-analysis-work%402x.png)
 
 # Development
 
@@ -20,6 +20,22 @@ SentimentalAnalysis API:
 - Libraries: @azure/ai-text-analytics, swagger-jsdoc, swagger-ui-express
 - API Checker : swagger
 
+# Try Out
+
+Temporarily the API is hosted in one of the droplets in Digital Ocean, to run some tests and checkout the functionality
+
+### Server Endpoint
+
+```
+http://162.243.172.115:5000/
+```
+
+### Post Request Body
+
+```JSON
+{"text": "<Your Text or Conversation goes here>"}
+```
+
 # Setup in Local
 
 1. Make sure you have installed node, if not download and install the latest version of node
@@ -34,13 +50,16 @@ SentimentalAnalysis API:
 
 **Request:**
 
+```JSON
+
 curl -X 'POST' \
- 'http://localhost:5000/api/v1/sentiments/' \
- -H 'accept: application/json' \
- -H 'Content-Type: application/json' \
- -d '{
-"text": "The rooms were beautiful but dirty. The AC was good and quiet, but the elevator was broken"
+  'http://162.243.172.115:5000/api/v1/sentiments/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "text": "The rooms were beautiful but dirty. The AC was good and quiet, but the elevator was broken"
 }'
+```
 
 **Response:**
 
@@ -132,13 +151,16 @@ curl -X 'POST' \
 
 **Request:**
 
+```JSON
 curl -X 'POST' \
- 'http://162.243.172.115:5000/api/v1/sentiments/' \
- -H 'accept: application/json' \
- -H 'Content-Type: application/json' \
- -d '{
-"text": "Las habitaciones eran hermosas pero sucias. El aire acondicionado era bueno y silencioso, pero el ascensor estaba roto."
+  'http://162.243.172.115:5000/api/v1/sentiments/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "text": "Las habitaciones eran hermosas pero sucias. El aire acondicionado era bueno y silencioso, pero el ascensor estaba roto."
 }'
+
+```
 
 **Response:**
 
