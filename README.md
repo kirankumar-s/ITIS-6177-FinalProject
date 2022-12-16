@@ -7,7 +7,7 @@ Setup:
 3. Open terminal and run the command "npm i"
 4. To run the server locally use following command "node app.js"
 5. Test the server with the following endpoint "http://localhost:5000/"
-6. To test the API, send the post request to the following endpoint "http://localhost:5000/sentiments/" with the payload containing the text to do sentimental analysis.
+6. To test the API, send the post request to the following endpoint "http://localhost:5000/api/v1/sentiments/" with the payload containing the text to do sentimental analysis.
 7. For swagger docs, use the following endpoint "http://localhost:5000/docs"
 
 Usage:

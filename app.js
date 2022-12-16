@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
  *             type: string
  *             example: "I had the best day of my life."
  */
-app.post("/sentiments/", (req, res, next) => {
+app.post("/api/v1/sentiments/", (req, res, next) => {
     const data = req.body;
     if (data.text) {
         sentimentAnalysisWithOpinionMining(data.text)
@@ -71,9 +71,9 @@ app.post("/sentiments/", (req, res, next) => {
                 }
 
             })
-            .catch(err => res.status(500).send({ 'error': err }));
+            .catch(err => res.status(500).send({ 'status_code': 500, 'error': err }));
     } else {
-        res.status(400).send({ 'error': 'Invalid input, must contain text attribute in the json object' })
+        res.status(400).send({ 'status_code': 400, 'error': 'Invalid input, must contain text attribute in the json object' })
     }
 
 });
